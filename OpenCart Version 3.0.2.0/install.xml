@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modification>
+    <name>Open SendGrid</name>
+    <code>OpenSendGridMailer</code>
+    <version>1.0</version>
+    <author>M.T.C Lakshitha</author>
+    <link>https://github.com/lakshitha212</link>
+    <file path="admin/controller/marketing/contact.php">
+        <operation>
+            <search>
+                <![CDATA[$mail = new Mail();]]>
+            </search>
+            <add position="replace">
+                <![CDATA[$mail = new OpenSendGridMailer($this->config->get('module_open_sendgrid_api_key'));]]>
+            </add>
+        </operation>
+    </file>
+    <file path="catalog/controller/information/contact.php">
+        <operation>
+            <search>
+                <![CDATA[$mail = new Mail();]]>
+            </search>
+            <add position="replace">
+                <![CDATA[$mail = new OpenSendGridMailer($this->config->get('module_open_sendgrid_api_key'));]]>
+            </add>
+        </operation>
+    </file>
+    <file path="catalog/model/{account,checkout}/{customer,order}*.php">
+        <operation>
+            <search>
+                <![CDATA[$mail = new Mail();]]>
+            </search>
+            <add position="replace">
+                <![CDATA[$mail = new OpenSendGridMailer($this->config->get('module_open_sendgrid_api_key'));]]>
+            </add>
+        </operation>
+    </file>
+</modification>
