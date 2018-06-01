@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modification>
+    <name>Open SendGrid</name>
+    <code>OpenSendGridMailer</code>
+    <version>1.0</version>
+    <author>M.T.C Lakshitha</author>
+    <link>https://github.com/lakshitha212</link>
+    <file path="admin/controller/marketing/contact.php">
+        <operation>
+            <search>
+                <![CDATA[$mail = new Mail();]]>
+            </search>
+            <add position="replace">
+                <![CDATA[$mail = new SendgridMail($this->config->get('sendgrid_api_key'));]]>
+            </add>
+        </operation>
+    </file>
+    <file path="catalog/controller/information/contact.php">
+        <operation>
+            <search>
+                <![CDATA[$mail = new Mail();]]>
+            </search>
+            <add position="replace">
+                <![CDATA[$mail = new SendgridMail($this->config->get('sendgrid_api_key'));]]>
+            </add>
+        </operation>
+    </file>
+    <file path="catalog/model/{account,checkout}/{customer,order}*.php">
+        <operation>
+            <search>
+                <![CDATA[$mail = new Mail();]]>
+            </search>
+            <add position="replace">
+                <![CDATA[$mail = new SendgridMail($this->config->get('sendgrid_api_key'));]]>
+            </add>
+        </operation>
+    </file>
+    <file path="catalog/model/account/quicksignup.php">
+        <operation>
+            <search>
+                <![CDATA[$mail = new Mail();]]>
+            </search>
+            <add position="replace">
+                <![CDATA[$mail = new SendgridMail($this->config->get('sendgrid_api_key'));]]>
+            </add>
+        </operation>
+    </file>
+    <file path="catalog/controller/affiliate/forgotten.php">
+        <operation>
+            <search>
+                <![CDATA[$mail = new Mail();]]>
+            </search>
+            <add position="replace">
+                <![CDATA[$mail = new SendgridMail($this->config->get('sendgrid_api_key'));]]>
+            </add>
+        </operation>
+    </file>
+    <file path="catalog/controller/account/forgotten.php">
+        <operation>
+            <search>
+                <![CDATA[$mail = new Mail();]]>
+            </search>
+            <add position="replace">
+                <![CDATA[$mail = new SendgridMail($this->config->get('sendgrid_api_key'));]]>
+            </add>
+        </operation>
+    </file>
+    <file path="admin/controller/common/forgotten.php">
+        <operation>
+            <search>
+                <![CDATA[$mail = new Mail();]]>
+            </search>
+            <add position="replace">
+                <![CDATA[$mail = new SendgridMail($this->config->get('sendgrid_api_key'));]]>
+            </add>
+        </operation>
+    </file>
+    <file path="admin/model/customer/customer.php">
+        <operation>
+            <search>
+                <![CDATA[$mail = new Mail();]]>
+            </search>
+            <add position="replace">
+                <![CDATA[$mail = new SendgridMail($this->config->get('sendgrid_api_key'));]]>
+            </add>
+        </operation>
+    </file>
+    <file path="catalog/model/affiliate/affiliate.php">
+        <operation>
+            <search>
+                <![CDATA[$mail = new Mail();]]>
+            </search>
+            <add position="replace">
+                <![CDATA[$mail = new SendgridMail($this->config->get('sendgrid_api_key'));]]>
+            </add>
+        </operation>
+    </file>
+    <file path="admin/model/sale/return.php">
+        <operation>
+            <search>
+                <![CDATA[$mail = new Mail();]]>
+            </search>
+            <add position="replace">
+                <![CDATA[$mail = new SendgridMail($this->config->get('sendgrid_api_key'));]]>
+            </add>
+        </operation>
+    </file>
+    <file path="admin/model/sale/voucher.php">
+        <operation>
+            <search>
+                <![CDATA[$mail = new Mail();]]>
+            </search>
+            <add position="replace">
+                <![CDATA[$mail = new SendgridMail($this->config->get('sendgrid_api_key'));]]>
+            </add>
+        </operation>
+    </file>
+    <file path="catalog/controller/total/voucher.php">
+        <operation>
+            <search>
+                <![CDATA[$mail = new Mail();]]>
+            </search>
+            <add position="replace">
+                <![CDATA[$mail = new SendgridMail($this->config->get('sendgrid_api_key'));]]>
+            </add>
+        </operation>
+    </file>
+    <file path="admin/model/marketing/affiliate.php">
+        <operation>
+            <search>
+                <![CDATA[$mail = new Mail();]]>
+            </search>
+            <add position="replace">
+                <![CDATA[$mail = new SendgridMail($this->config->get('sendgrid_api_key'));]]>
+            </add>
+        </operation>
+    </file>
+    <file path="catalog/model/catalog/review.php">
+        <operation>
+            <search>
+                <![CDATA[$mail = new Mail();]]>
+            </search>
+            <add position="replace">
+                <![CDATA[$mail = new SendgridMail($this->config->get('sendgrid_api_key'));]]>
+            </add>
+        </operation>
+    </file>
+</modification>
